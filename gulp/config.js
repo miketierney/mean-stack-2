@@ -5,7 +5,7 @@ module.exports = {
   javascript: {
     src: src + '/js/**/*.js',
     dest: dest + '/js/',
-    entry: src + '/js/app.js',
+    entry: src + '/js/index.js',
     outputFilename: 'app.js'
   },
   assets: {
