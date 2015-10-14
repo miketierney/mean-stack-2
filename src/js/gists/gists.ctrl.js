@@ -1,7 +1,7 @@
 require("../app.js");
 require("../filters/pager.filter.js");
 
-angular.module("gisty").controller("GistsCtrl", function ($scope, $http, $log, $q) {
+angular.module("gisty").controller("GistsCtrl", function ($scope, $http, $log, token) {
   $scope.pagination = {
     currentPage: 1,
     perPage: 2,
@@ -18,7 +18,7 @@ angular.module("gisty").controller("GistsCtrl", function ($scope, $http, $log, $
 
   $http.get("https://api.github.com/users/miketierney/gists",  {
     headers: {
-      "Authorization": "token OAUTH_TOKEN",
+      "Authorization": "token " + token,
     }
   }).then(successHandler, errorHandler);
 
@@ -35,7 +35,7 @@ angular.module("gisty").controller("GistsCtrl", function ($scope, $http, $log, $
           $log.error("Something went wrong requesting " + file.raw_url, resp);
         });
       });
-    })
+    });
 
     $scope.gists = response.data;
     $log.info("response", response);

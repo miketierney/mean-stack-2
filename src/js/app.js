@@ -2,6 +2,6 @@ require("angular");
 (function () {
 
 
-  angular.module("gisty", []);
+  angular.module("gisty", ["gisty.config"]);
 
 }());
