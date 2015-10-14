@@ -18,7 +18,7 @@ angular.module("gisty").controller("GistsCtrl", function ($scope, $http, $log, $
 
   $http.get("https://api.github.com/users/miketierney/gists",  {
     headers: {
-      "Authorization": "token 27843b9dbaf0afe2e6cae9069b14cabb5183f965",
+      "Authorization": "token OAUTH_TOKEN",
     }
   }).then(successHandler, errorHandler);
 
