@@ -35,5 +35,8 @@ module.exports = {
     jsSrc: dest + '/js/*.js',
     cssDest: dest + '/css/',
     jsDest: dest + '/js/',
-  }
+  },
+  ngConfig: {
+    dest: dest + '/js',
+  },
 };
