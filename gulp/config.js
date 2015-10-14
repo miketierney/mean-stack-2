@@ -5,7 +5,7 @@ module.exports = {
   javascript: {
     src: src + '/js/**/*.js',
     dest: dest + '/js/',
-    entry: src + '/js/app.js',
+    entry: src + '/js/index.js',
     outputFilename: 'app.js'
   },
   assets: {
@@ -35,5 +35,8 @@ module.exports = {
     jsSrc: dest + '/js/*.js',
     cssDest: dest + '/css/',
     jsDest: dest + '/js/',
-  }
+  },
+  ngConfig: {
+    dest: dest + '/js',
+  },
 };
